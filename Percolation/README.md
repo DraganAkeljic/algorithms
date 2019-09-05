@@ -10,7 +10,10 @@
 Write a program to estimate the value of the percolation threshold via Monte Carlo simulation.
 
 Install our Java programming environment (optional). Install our custom IntelliJ programming environment by following
-these step-by-step instructions for your operating system [ Mac OS X · Windows · Linux ].
+these step-by-step instructions for your operating system
+* [Mac OS X](https://lift.cs.princeton.edu/java/mac/)
+* [Windows] (https://lift.cs.princeton.edu/java/windows/)
+* [Linux] (https://lift.cs.princeton.edu/java/linux/)
 
 After following these instructions, the commands javac-algs4 and java-algs4 will classpath in algs4.jar, which contains
 Java classes for I/O and all of the algorithms in the textbook. To access a class in algs4.jar, you need an import
@@ -150,7 +153,7 @@ The constructor should throw a java.lang.IllegalArgumentException if either n �
 
 Also, include a main() method that takes two command-line arguments n and T, performs T independent computational
 experiments (discussed above) on an n-by-n grid, and prints the sample mean, sample standard deviation, and the 95%
-confidence interval for the percolation threshold. Use StdRandom to generate random numbers; use StdStats to compute the
+confidence interval for the percolation threshold. Use StdRandom to generate random numbers; use [StdStats](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/StdStats.html) to compute the
 sample mean and sample standard deviation.
 
 ```
@@ -175,10 +178,10 @@ stddev                  = 0.11775205263262094
 95% confidence interval = [0.666217665216461, 0.6676773347835391]
 ```
 
-Analysis of running time and memory usage (optional and not graded). Implement the Percolation data type using the quick
-find algorithm in QuickFindUF.
+Analysis of running time and memory usage (optional and not graded). Implement the Percolation data type using the [quick
+find](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/QuickFindUF.html) algorithm in QuickFindUF.
 
-    * Use Stopwatch to measure the total running time of PercolationStats for various values of n and T. How does
+    * Use [Stopwatch](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/Stopwatch.html) to measure the total running time of PercolationStats for various values of n and T. How does
     doubling n affect the total running time? How does doubling T affect the total running time? Give a formula (using
     tilde notation) of the total running time on your computer (in seconds) as a single function of both n and T.
 
@@ -186,7 +189,7 @@ find algorithm in QuickFindUF.
     a Percolation object uses to model an n-by-n percolation system. Count all memory that is used, including memory for
     the union–find data structure.
 
-Now, implement the Percolation data type using the weighted quick union algorithm in WeightedQuickUnionUF. Answer the
+Now, implement the Percolation data type using the weighted quick union algorithm in [WeightedQuickUnionUF](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/WeightedQuickUnionUF.html). Answer the
 questions in the previous paragraph.
 
 Web submission. Submit a .zip file containing only Submit only Percolation.java (using the weighted quick-union
