@@ -182,14 +182,14 @@ stddev                  = 0.11775205263262094
 Analysis of running time and memory usage (optional and not graded). Implement the Percolation data type using the [quick
 find](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/QuickFindUF.html) algorithm in QuickFindUF.
 
-    * Use [Stopwatch](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/Stopwatch.html) to measure the
-    total running time of PercolationStats for various values of n and T. How does
-    doubling n affect the total running time? How does doubling T affect the total running time? Give a formula (using
-    tilde notation) of the total running time on your computer (in seconds) as a single function of both n and T.
+* Use [Stopwatch](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/Stopwatch.html) to measure the
+total running time of PercolationStats for various values of n and T. How does
+doubling n affect the total running time? How does doubling T affect the total running time? Give a formula (using
+tilde notation) of the total running time on your computer (in seconds) as a single function of both n and T.
 
-    * Using the 64-bit memory-cost model from lecture, give the total memory usage in bytes (using tilde notation) that
-    a Percolation object uses to model an n-by-n percolation system. Count all memory that is used, including memory for
-    the union–find data structure.
+* Using the 64-bit memory-cost model from lecture, give the total memory usage in bytes (using tilde notation) that
+a Percolation object uses to model an n-by-n percolation system. Count all memory that is used, including memory for
+the union–find data structure.
 
 Now, implement the Percolation data type using the weighted quick union algorithm in
 [WeightedQuickUnionUF](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/WeightedQuickUnionUF.html).
