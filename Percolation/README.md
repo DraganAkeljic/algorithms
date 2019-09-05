@@ -2,8 +2,8 @@
 
 ## Dependencies
 
-    [stdlib.jar](http://algs4.cs.princeton.edu/code/stdlib.jar)
-    [algs4.jar](http://algs4.cs.princeton.edu/code/algs4.jar)
+[stdlib.jar](http://algs4.cs.princeton.edu/code/stdlib.jar)
+[algs4.jar](http://algs4.cs.princeton.edu/code/algs4.jar)
 
 ## Description
 
