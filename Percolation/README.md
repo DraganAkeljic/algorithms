@@ -1,11 +1,11 @@
 # Percolation
 
-### Dependencies ###
+## Dependencies
 
-    * [stdlib.jar](http://algs4.cs.princeton.edu/code/stdlib.jar)
-    * [algs4.jar](http://algs4.cs.princeton.edu/code/algs4.jar)
+    [stdlib.jar](http://algs4.cs.princeton.edu/code/stdlib.jar)
+    [algs4.jar](http://algs4.cs.princeton.edu/code/algs4.jar)
 
-### Description ###
+## Description
 
 Write a program to estimate the value of the percolation threshold via Monte Carlo simulation.
 
@@ -25,13 +25,15 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 Note that your code must be in the default package; if you use a package statement, the autograder will reject your
 submission.
 
-#### Percolation. #### Given a composite systems comprised of randomly distributed insulating and metallic materials: what
+#### Percolation.
+Given a composite systems comprised of randomly distributed insulating and metallic materials: what
 fraction of the materials need to be metallic so that the composite system is an electrical conductor? Given a porous
 landscape with water on the surface (or oil below), under what conditions will the water be able to drain through to the
 bottom (or the oil to gush through to the surface)? Scientists have defined an abstract process known as percolation to
 model such situations.
 
-#### The model. #### We model a percolation system using an n-by-n grid of sites. Each site is either open or blocked. A full site
+#### The model
+We model a percolation system using an n-by-n grid of sites. Each site is either open or blocked. A full site
 is an open site that can be connected to an open site in the top row via a chain of neighboring (left, right, up, down)
 open sites. We say the system percolates if there is a full site in the bottom row. In other words, a system percolates
 if we fill all open sites connected to the top row and that process fills some open site on the bottom row. (For the
@@ -43,7 +45,8 @@ flowing from top to bottom.)
 ![img1](https://coursera.cs.princeton.edu/algs4/assignments/percolation/percolates-yes.png)
 ![img2](https://coursera.cs.princeton.edu/algs4/assignments/percolation/percolates-no.png)
 
-#### The problem. #### In a famous scientific problem, researchers are interested in the following question: if sites are
+#### The problem
+In a famous scientific problem, researchers are interested in the following question: if sites are
 independently set to be open with probability p (and therefore blocked with probability 1 − p), what is the probability
 that the system percolates? When p equals 0, the system does not percolate; when p equals 1, the system percolates. The
 plots below show the site vacancy probability p versus the percolation probability for 20-by-20 random grid (left) and
@@ -56,7 +59,8 @@ When n is sufficiently large, there is a threshold value p* such that when p < p
 percolates, and when p > p*, a random n-by-n grid almost always percolates. No mathematical solution for determining the
 percolation threshold p* has yet been derived. Your task is to write a computer program to estimate p*.
 
-#### Percolation data type. #### To model a percolation system, create a data type Percolation with the following API:
+#### Percolation data type
+To model a percolation system, create a data type Percolation with the following API:
 
 ```
 public class Percolation {
@@ -91,17 +95,18 @@ prescribed range. The constructor should throw a java.lang.IllegalArgumentExcept
 Performance requirements.  The constructor should take time proportional to n2; all methods should take constant time
 plus a constant number of calls to the union–find methods union(), find(), connected(), and count().
 
-#### Monte Carlo simulation. #### To estimate the percolation threshold, consider the following computational experiment:
+#### Monte Carlo simulation
+To estimate the percolation threshold, consider the following computational experiment:
 
     * Initialize all sites to be blocked.
 
     Repeat the following until the system percolates:
 
-        * Choose a site uniformly at random among all blocked sites.
+        - Choose a site uniformly at random among all blocked sites.
 
-        * Open the site.
+        - Open the site.
 
-    * The fraction of sites that are opened when the system percolates provides an estimate of the percolation threshold.
+    * The fraction of sites that are opened when the system percolates provides an estimate of the percolation threshold
 
 For example, if sites are opened in a 20-by-20 lattice according to the snapshots below, then our estimate of the
 percolation threshold is 204/400 = 0.51 because the system percolates when the 204th site is opened.
