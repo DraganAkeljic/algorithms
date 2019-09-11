@@ -52,8 +52,8 @@ flowing from top to bottom.)
 In a famous scientific problem, researchers are interested in the following question: if sites are
 independently set to be open with probability p (and therefore blocked with probability 1 − p), what is the probability
 that the system percolates? When p equals 0, the system does not percolate; when p equals 1, the system percolates. The
-plots below show the site vacancy probability p versus the percolation probability for 20-by-20 random grid (left) and
-100-by-100 random grid (right).
+plots below show the site vacancy probability p versus the percolation probability for 20-by-20 random grid (top) and
+100-by-100 random grid (bottom).
 
 ![img3](https://coursera.cs.princeton.edu/algs4/assignments/percolation/percolation-threshold20.png)
 ![img4](https://coursera.cs.princeton.edu/algs4/assignments/percolation/percolation-threshold100.png)
@@ -95,7 +95,7 @@ Corner cases.  By convention, the row and column indices are integers between 1 
 site: Throw a java.lang.IllegalArgumentException if any argument to open(), isOpen(), or isFull() is outside its
 prescribed range. The constructor should throw a java.lang.IllegalArgumentException if n ≤ 0.
 
-Performance requirements.  The constructor should take time proportional to n2; all methods should take constant time
+Performance requirements.  The constructor should take time proportional to n**2; all methods should take constant time
 plus a constant number of calls to the union–find methods union(), find(), connected(), and count().
 
 #### Monte Carlo simulation
